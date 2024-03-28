@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 1 practice</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h2>{{ greating }}</h2>
+        <p>{{ description }} <br/> You just ({{ greating.length }}) wrote charecter</p>
+        <input type="text" v-model="greating">
+    </div>
+    <script>
+        Vue.createApp({
+            data(){
+                return{
+                    greating: 'Hello World',
+                    description: 'Lol! just printing hello world'
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+</html>
